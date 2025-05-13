@@ -1,5 +1,12 @@
-return (
-  <div className="App">
-    <h1>Welcome to My App, [Your Name]!</h1>
-  </div>
-);
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Welcome to My App!</h1>
+    </div>
+  );
+}
+
+export default App;
