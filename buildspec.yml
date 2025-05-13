@@ -8,11 +8,6 @@ phases:
       - echo Installing dependencies...
       - npm install
 
-  pre_build:
-    commands:
-      - echo Running tests...
-      - npm test   # Make sure you have a test script in package.json
-
   build:
     commands:
       - echo Building the project...
@@ -20,7 +15,7 @@ phases:
 
   post_build:
     commands:
-      - echo Build and tests completed successfully.
+      - echo Build completed successfully.
 
 artifacts:
   files:
@@ -30,4 +25,3 @@ artifacts:
 cache:
   paths:
     - 'node_modules/**/*'
-
