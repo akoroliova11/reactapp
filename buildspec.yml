@@ -25,9 +25,12 @@ phases:
 artifacts:
   files:
     - '**/*'
-    - '!**/node_modules/**'
+    - '!**/node_modules/**' 
+    - 'build/**/*'       
 
 cache:
   paths:
-    - '/root/.npm/**/*'
+    - '/root/.npm/**/*'  
+    - 'node_modules/**/*' 
+
 
