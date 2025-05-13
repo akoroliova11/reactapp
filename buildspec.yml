@@ -3,21 +3,18 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      nodejs: 16
     commands:
       - echo Installing dependencies...
       - npm install
-
   build:
     commands:
-      - echo Building the React app...
+      - echo Building the project...
       - npm run build
-
   post_build:
     commands:
       - echo Deploying to S3...
-      - aws s3 sync build/ s3://reactappbucket --delete
-
+      - aws s3 sync build/ s3://your-bucket-name --delete
 artifacts:
   files:
     - '**/*'
